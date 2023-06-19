@@ -8,14 +8,14 @@
             <th>cnh</th>
             <th>gmail</th>
         </tr>
-        {% for cadastros in cadastro %}
+        {% for cadastro in cadastros %}
         <tr>
-            <td>{{cadastros.id}}</td>
-            <td>{{cadastros.nome}}</td>
-            <td>{{cadastros.idade}}</td>
-            <td>{{cadastros.cpf}}</td>
-            <td>{{cadastros.cnh}}</td>
-            <td>{{cadastros.gmail}}</td>
+            <td>{{cadastro.id}}</td>
+            <td>{{cadastro.nome}}</td>
+            <td>{{cadastro.idade}}</td>
+            <td>{{cadastro.cpf}}</td>
+            <td>{{cadastro.cnh}}</td>
+            <td>{{cadastro.gmail}}</td>
         </tr>
         {% endfor %}
     </table>

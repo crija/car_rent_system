@@ -1,6 +1,6 @@
 from django.db import models
 
-class Cadastro(models.Model):
+class Cadastros(models.Model):
     id_cadastro = models.AutoField(primary_key=True)
     nome = models.TextField(max_length=100)
     idade = models.IntegerField()

@@ -4,7 +4,7 @@ from django.urls import path
 from app_aluguel_carro import views
 
 urlpatterns = [
-    path('', views.necessidades, name = 'necessidades'),
+    path('', views.dados, name = 'dados'),
 
-    path('cadastro/', views.cadastro, name = 'dados_cadastrados')
+    path('cadastros/', views.cadastros, name = 'informações_cadastradas')
 ]
