@@ -1,0 +1,22 @@
+<div class = "container">
+    <table>
+        <tr>
+            <th>id</th>
+            <th>nome</th>
+            <th>idade</th>
+            <th>cpf</th>
+            <th>cnh</th>
+            <th>gmail</th>
+        </tr>
+        {% for cadastros in cadastro %}
+        <tr>
+            <td>{{cadastros.id}}</td>
+            <td>{{cadastros.nome}}</td>
+            <td>{{cadastros.idade}}</td>
+            <td>{{cadastros.cpf}}</td>
+            <td>{{cadastros.cnh}}</td>
+            <td>{{cadastros.gmail}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>

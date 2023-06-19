@@ -1,14 +1,18 @@
 <nav>
-<form action="{% url 'dados_cadastrados' %}">
+<form action="{% url 'dados_cadastrados' %}"method="post"> 
+    {% csrf_token %}
     <h1>ALUGUEL DE CARROS DA SUA PREFERÊNCIA</h1>
     <h2>Preecha o campo a seguir:</h2>
-
     <h4>Campo Obrigatório*</h4>
-    <div>Nome <input name="idade"type="text"></div>
+    <div> Nome <input name="nome" type="text"></div>
     <br>
-    <div>Idade<input name="idade" type="number"></div>
+    <div>Idade <input name="idade" type="number"></div>
     <br>
-    <div>Gmail<input name="gmail" type="text"></div>
+    <div>Gmail <input name="gmail" type="text"></div>
+    <br>
+    <div>CPF <input name ="cpf" type="text" name="" id=""></div>
+    <br>
+    <div>CNH <input name = "cnh" type="" name="" id=""></div>
     <br>
     <button>Entrar</button>
 </nav>
