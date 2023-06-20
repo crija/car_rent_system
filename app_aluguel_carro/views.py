@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import Cadastros
+from .models import Preferencias
 
 
 def dados(request):
@@ -17,8 +18,25 @@ def cadastros(request):
 
     #Exibir todos os usuários já cadastrados em uma nova página.
     cadastros = {
-        'cadastros':Cadastros.objects.all()
+        'cadastros':Cadastros.objects.all(),
+        
     }
 
     #Retornar os dados para a página de listagem de usuários
     return render(request, 'cadastros/cadastros.html', cadastros)
+
+def preferencias(request):
+    nova_preferencia = Preferencias()
+    nova_preferencia.cidade = request.POST.get('cidade')
+    nova_preferencia.dia_retirada = request.POST.get('dia_retirada')
+    nova_preferencia.dia_devolução = request.POST.get('dia_devolução')
+    nova_preferencia.tamanho = request.POST.get('tamanho')
+    nova_preferencia.cor = request.POST.get('cor')
+    nova_preferencia.save()
+
+    
+    preferencias = {
+        'preferencias':Preferencias.objects.all()
+    }
+
+    return render(request, 'cadastros/preferencias.html', preferencias)
