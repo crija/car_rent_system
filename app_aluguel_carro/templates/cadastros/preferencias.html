@@ -1,0 +1,19 @@
+<nav>
+    <form action="{% url 'informações_preferenciais' %}"method="post"> 
+        {% csrf_token %}
+        <h1>A sua preferencia conta!</h1>
+        <h2>Preecha o campo a seguir:</h2>
+        <h4>Campo Obrigatório*</h4>
+        <div> cidade <input name="cidade" type="text"></div>
+        <br>
+        <div>Dia de retirada <input name="dia_retirada" type="number"></div>
+        <br>
+        <div>Dia de devolução <input name="dia_devolução" type="number"></div>
+        <br>
+        <div>Tamanho <input name ="tamanho" type="text" name="" id=""></div>
+        <br>
+        <div>Cor <input name = "cor" type="" name="" id=""></div>
+        <br>
+        <button>Entrar</button>
+    </nav>
+    </form>

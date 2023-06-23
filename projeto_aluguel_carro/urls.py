@@ -8,5 +8,7 @@ urlpatterns = [
 
     path('cadastros/', views.cadastros, name = 'informações_cadastradas'),
 
-    path('preferencias', views.preferencias, name = 'preferencias')
+    path('preferencias/', views.preferencias, name ='informações_preferenciais'),
+
+   
 ]

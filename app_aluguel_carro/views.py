@@ -16,18 +16,12 @@ def cadastros(request):
     novo_cadastros.gmail = request.POST.get('gmail')
     novo_cadastros.save()
 
-    #Exibir todos os usuários já cadastrados em uma nova página.
-    cadastros = {
-        'cadastros':Cadastros.objects.all(),
-        
-    }
-
     #Retornar os dados para a página de listagem de usuários
-    return render(request, 'cadastros/cadastros.html', cadastros)
+    return render(request, 'cadastros/preferencias.html')
 
 def preferencias(request):
     nova_preferencia = Preferencias()
-    nova_preferencia.cidade = request.POST.get('cidade')
+    nova_preferencia.cidade_retirada = request.POST.get('cidade')
     nova_preferencia.dia_retirada = request.POST.get('dia_retirada')
     nova_preferencia.dia_devolução = request.POST.get('dia_devolução')
     nova_preferencia.tamanho = request.POST.get('tamanho')
@@ -35,8 +29,9 @@ def preferencias(request):
     nova_preferencia.save()
 
     
-    preferencias = {
-        'preferencias':Preferencias.objects.all()
+    dados = {
+        'preferencias':Preferencias.objects.all(),
+        'cadastros':Cadastros.objects.all()
     }
 
-    return render(request, 'cadastros/preferencias.html', preferencias)
+    return render(request, 'cadastros/cadastros.html', dados)

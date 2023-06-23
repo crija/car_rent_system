@@ -1,6 +1,6 @@
 
 <div class = "container">
-    <h1>{{carlinha}}</h1>
+    
     <table>
         <tr>
             <th>id</th>
@@ -12,7 +12,7 @@
         </tr>
         {% for cadastro in cadastros %}
         <tr>
-            <td>{{cadastro.id}}</td>
+            <td>{{cadastro.id_cadastro}}</td>
             <td>{{cadastro.nome}}</td>
             <td>{{cadastro.idade}}</td>
             <td>{{cadastro.cpf}}</td>
@@ -21,4 +21,27 @@
         </tr>
         {% endfor %}
     </table>
+
+    <table>
+        <tr>
+            <th>id</th>
+            <th>cidade_retirada</th>
+            <th>dia_retirada</th>
+            <th>dia_devolucao</th>
+            <th>tamanho</th>
+            <th>cor</th>
+        </tr>
+        {% for preferencia in preferencias %}
+        <tr>
+            <td>{{preferencia.id_preferencias}}</td>
+            <td>{{preferencia.cidade_retirada}}</td>
+            <td>{{preferencia.dia_retirada}}</td>
+            <td>{{preferencia.dia_devolução}}</td>
+            <td>{{preferencia.tamanho}}</td>
+            <td>{{preferencia.cor}}</td>
+        </tr>
+        {% endfor %}
+    </table>
 </div>
+
+
