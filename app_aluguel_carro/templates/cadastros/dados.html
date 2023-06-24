@@ -1,8 +1,9 @@
 <nav>
     <form action="{% url 'informações_cadastradas' %}"method="post"> 
         {% csrf_token %}
-        <h1>ALUGUEL DE CARROS DA SUA PREFERÊNCIA</h1>
-        <h2>Preecha o campo a seguir:</h2>
+        <h1>Aluguel de carros com os melhores valores!</h1>
+        <h2>O que a nossa Tita oferece para você?</h2>
+        <p>Oferecemos os melhores carros com um valor super acessível</p>
         <h4>Campo Obrigatório*</h4>
         <div> Nome <input name="nome" type="text"></div>
         <br>
