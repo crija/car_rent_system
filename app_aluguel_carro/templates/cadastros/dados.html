@@ -1,23 +1,37 @@
-<nav>
-    <form action="{% url 'informações_cadastradas' %}"method="post"> 
-        {% csrf_token %}
-        <h1>Aluguel de carros com os melhores valores!</h1>
-        <h2>O que a nossa Tita oferece para você?</h2>
-        <p>Oferecemos os melhores carros com um valor super acessível</p>
-        {% load static %}
-        <img src="{% static 'app_aluguel_carro/imagem.jpg' %}" alt="My image">
-        <h4>Campo Obrigatório*</h4>
-        <div> Nome <input name="nome" type="text"></div>
-        <br>
-        <div>Idade <input name="idade" type="number"></div>
-        <br>
-        <div>Gmail <input name="gmail" type="text"></div>
-        <br>
-        <div>CPF <input name ="cpf" type="text" name="" id=""></div>
-        <br>
-        <div>CNH <input name = "cnh" type="" name="" id=""></div>
-        <br>
-        <button>Entrar</button>
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dados</title>
+</head>
+<body>
+    <nav style="background-color:rgb(127, 153, 255) !important;" class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+          <span class="navbar-brand mb-0 h1"><a style="text-decoration: none;color: black" href="{% url 'dados' %}"></a><h1><center>ALUGUEL DE CARROS</center></h1></span>
+        </div>
     </nav>
-    </form>
+
+    <form action="{% url 'informações_cadastradas' %}" method="post">
+    {% csrf_token %}
+    <h3>Está procurando aquele carro perfeiro para viajar com a sua família, para aquele passeio de final de semana ou até mesmo para o dia a dia?</h3>
+    <p><big>Aqui você encontra o carro que procura com o melhor preço do mercado!</big></p>
+    {% load static %}
+    <img src="{% static 'app_aluguel_carro/mulher-viajando1500.jpg' %}" alt="My image">
+    <center>
     
+    <h2><mark style="background-color: rgb(118, 159, 133);">Cadastre-se</mark></h2>
+    <p>Nome <input name="nome" type="text"></p>
+    <p>Idade <input name="idade" type="number"></p>
+    <p>Gmail <input name="gmail" type="text"></p>
+    <p>CPF <input name ="cpf" type="text" name="" id=""></p>
+    <p>CNH <input name ="cnh" type="text" name="" id=""></p>
+    <br>
+    <button>entrar</button>
+    </center>
+    </form>
+</body>
+</html>
+
+
+
