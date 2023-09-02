@@ -20,13 +20,13 @@ def cadastros(request):
     return render(request, 'cadastros/preferencias.html')
 
 def preferencias(request):
-    nova_preferencia = Preferencias()
-    nova_preferencia.cidade_retirada = request.POST.get('cidade')
-    nova_preferencia.dia_retirada = request.POST.get('dia_retirada')
-    nova_preferencia.dia_devolução = request.POST.get('dia_devolução')
-    nova_preferencia.tamanho = request.POST.get('tamanho')
-    nova_preferencia.cor = request.POST.get('cor')
-    nova_preferencia.save()
+    nova_preferencias = Preferencias()
+    nova_preferencias.cidade_retirada = request.POST.get('cidade_retirada')
+    nova_preferencias.dia_retirada = request.POST.get('dia_retirada')
+    nova_preferencias.dia_devolução = request.POST.get('dia_devolução')
+    nova_preferencias.tamanho = request.POST.get('tamanho')
+    nova_preferencias.cor = request.POST.get('cor')
+    nova_preferencias.save()
 
     
     dados = {
