@@ -1,0 +1,15 @@
+<form action="{% url 'cars' %}" method="post">
+    {% csrf_token %}
+
+    <div>
+      <h1>Cadastrar carro</h1>
+      Cor <input name="color" type="text">
+      Model <input name="model" type="text">
+      Marca <input name="brand" type="text">
+      Ano <input name="year" type="">
+      Foto <input name="picture" type="text">
+      <button>Enviar</button>
+
+    </div>
+
+  </form>

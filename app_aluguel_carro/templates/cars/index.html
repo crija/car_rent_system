@@ -1,0 +1,26 @@
+<div>
+    <h1>Carros para alugar</h1>
+    <table>
+        <tr>
+            <th>cor</th>
+            <th>modelo</th>
+            <th>marca</th>
+            <th>ano</th>
+            <th>alugado?</th>
+            <th>alugado_até</th>
+            <th>foto</th>
+
+        </tr>
+        {% for car in cars %}
+        <tr>
+            <td>{{car.color}}</td>
+            <td>{{car.model}}</td>
+            <td>{{car.brand}}</td>
+            <td>{{car.year}}</td>
+            <td>{{car.rented}}</td>
+            <td>{{car.rented_until}}</td>
+            <td><img src="{{car.picture}}" alt=""></td> 
+        </tr>
+        {% endfor %}
+    </table>
+</div>
